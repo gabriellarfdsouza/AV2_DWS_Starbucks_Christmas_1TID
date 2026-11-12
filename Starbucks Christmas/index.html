@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Starbucks Christmas</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="responsivo.css">
+</head>
+
+<body class="pagina-vitrine">
+
+   <header>
+    <h1 class="logo">Starbucks Christmas</h1>
+    <p>The Magic of Christmas Starts Here</p>
+
+    <button class="botao-menu" id="botao-menu" aria-label="Abrir menu" aria-expanded="false">
+        ☰
+    </button>
+
+    <nav class="menu" id="menu">
+        <a class="ativo" href="index.html">Início</a>
+        <a href="produtos.html">Cardápio</a>
+        <a href="sobre.html">Sobre nós</a>
+        <a href="galeria.html">Natal</a>
+        <a href="contato.html">Contato</a>
+    </nav>
+</header>
+
+    <main>
+        <section class="hero">
+            <div class="hero-copy">
+                <span class="eyebrow">Experiência natalina premium</span>
+                <h2>O Natal chegou ao Starbucks com sabor, calor e magia.</h2>
+                <p>
+                    Descubra bebidas artesanais, sobremesas aconchegantes e momentos especiais
+                    preparados para transformar cada encontro em uma lembrança de fim de ano.
+                </p>
+                <div class="cta-row">
+                    <a class="btn" href="produtos.html">Conheça o cardápio</a>
+                    <a class="btn btn-secondary" href="galeria.html">Ver a temporada</a>
+                </div>
+            </div>
+
+            <div class="hero-visual">
+                <img src="img/propaganda/expresso.jpeg" alt="Ilustração natalina com xícara de café e elementos festivos">
+            </div>
+        </section>
+
+        <section class="section-box">
+            <div class="section-title">
+                <span class="eyebrow">Nossos destaques</span>
+                <h2>Uma celebração em cada detalhe</h2>
+            </div>
+
+            <div class="feature-grid">
+                <article class="feature-card">
+                    <img src="img/propaganda/sabores.jpeg" alt="Ilustração de bebidas natalinas">
+                    <div class="feature-body">
+                        <h3>Bebidas especiais</h3>
+                        <p>Cafés, cappuccinos e frappuccinos com aromas que aquecem o coração.</p>
+                    </div>
+                </article>
+
+                <article class="feature-card">
+                    <img src="img/propaganda/brownie.jpeg" alt="Ilustração de doces de Natal">
+                    <div class="feature-body">
+                        <h3>Comidas e doces</h3>
+                        <p>Croissants, cookies, brownies e sabores irresistíveis para celebrar.</p>
+                    </div>
+                </article>
+
+                <article class="feature-card">
+                    <img src="img/propaganda/surpresa.jpeg" alt="Ilustração de presentes e natal">
+                    <div class="feature-body">
+                        <h3>Edição especial</h3>
+                        <p>Sabores exclusivos e combinações cheias de tradição para a temporada.</p>
+                    </div>
+                </article>
+            </div>
+        </section>
+
+        <section class="musica-natal">
+    <p>Entre no clima de Natal</p>
+
+    <button id="botao-musica" type="button">
+        ♫ Tocar música
+    </button>
+
+    <audio id="musica-fundo" src="audio/musica-natalina.mp3" preload="none"></audio>
+
+</section>
+    </main>
+
+    <footer>
+        <p>Starbucks Christmas - Projeto escolar</p>
+        <p>The Magic of Christmas Starts Here</p>
+    </footer>
+
+
+    <script src="js/script.js" defer></script>
+
+</body>
+
+</html>

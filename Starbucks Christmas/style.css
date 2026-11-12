@@ -1,0 +1,902 @@
+
+/* =========================================
+   1. CORES, FONTES E VARIÁVEIS DO SITE
+   ========================================= */
+
+:root {
+    --creme: #f8f2ea;
+    --verde: #1f5d3a;
+    --verde-escuro: #123b2d;
+    --rosa: #d88b90;
+    --rosa-claro: #f6dfe1;
+    --vermelho: #a83d47;
+    --dourado: #d7a94d;
+    --branco: #ffffff;
+    --texto: #2d2a29;
+    --texto-suave: #685f5d;
+    --fonte-titulo: 'Playfair Display', serif;
+    --fonte-texto: 'Poppins', sans-serif;
+    --sombra-suave: 0 18px 45px rgba(22, 32, 29, 0.12);
+    --sombra-forte: 0 25px 55px rgba(22, 32, 29, 0.18);
+    --transicao: 0.3s ease;
+}
+
+/* =========================================
+   2. RESET E CONFIGURAÇÕES GERAIS
+   ========================================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background: linear-gradient(180deg, #fffaf5 0%, var(--creme) 100%);
+    color: var(--texto);
+    font-family: var(--fonte-texto);
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+img {
+    display: block;
+    max-width: 100%;
+}
+
+/* =========================================
+   3. CABEÇALHO E MENU PRINCIPAL
+   ========================================= */
+
+header {
+    width: 100%;
+    background: linear-gradient(135deg, var(--verde) 0%, #246b4b 100%);
+    color: var(--branco);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 22px;
+    padding: 18px 6%;
+    box-shadow: var(--sombra-suave);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.logo {
+    font-family: var(--fonte-titulo);
+    font-size: clamp(1.7rem, 2vw, 2.3rem);
+    font-weight: 700;
+    letter-spacing: 0.04em;
+    color: var(--branco);
+    margin: 0;
+}
+
+header p {
+    margin: 0;
+    color: rgba(255, 255, 255, 0.85);
+    font-size: 0.82rem;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+}
+
+.menu {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+}
+
+.menu a {
+    color: var(--branco);
+    font-size: 0.9rem;
+    font-weight: 600;
+    padding: 0.7rem 1rem;
+    border-radius: 999px;
+    transition: var(--transicao);
+}
+
+.menu a:hover,
+.menu a.ativo {
+    background: rgba(255, 255, 255, 0.13);
+    box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.18);
+}
+
+main {
+    width: min(1180px, 90%);
+    margin: 40px auto 70px;
+}
+
+/* =========================================
+   4. BANNER PRINCIPAL (HOME)
+   ========================================= */
+
+.hero {
+    display: grid;
+    grid-template-columns: 1.1fr 0.9fr;
+    align-items: center;
+    gap: 36px;
+    padding: 22px 0 12px;
+}
+
+.hero-copy {
+    background: rgba(255, 255, 255, 0.7);
+    backdrop-filter: blur(4px);
+    border: 1px solid rgba(118, 84, 71, 0.08);
+    border-radius: 32px;
+    padding: 38px;
+    box-shadow: var(--sombra-suave);
+}
+
+/* =========================================
+   5. TÍTULOS E TEXTOS
+   ========================================= */
+
+.eyebrow {
+    display: inline-block;
+    padding: 0.45rem 0.85rem;
+    border-radius: 999px;
+    background: var(--rosa-claro);
+    color: var(--vermelho);
+    font-size: 0.75rem;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    margin-bottom: 1.1rem;
+}
+
+h1,
+h2,
+h3,
+h4 {
+    font-family: var(--fonte-titulo);
+    color: var(--verde-escuro);
+    line-height: 1.1;
+    margin-bottom: 14px;
+}
+
+h1 {
+    font-size: clamp(2.4rem, 4vw, 4rem);
+}
+
+h2 {
+    font-size: clamp(2rem, 3vw, 3rem);
+}
+
+h3 {
+    font-size: clamp(1.35rem, 2vw, 1.8rem);
+}
+
+p {
+    color: var(--texto);
+    line-height: 1.8;
+    font-size: 1rem;
+}
+
+.hero-copy p {
+    max-width: 620px;
+    font-size: 1.05rem;
+    color: var(--texto-suave);
+}
+
+/* =========================================
+   6. BOTÕES PRINCIPAIS
+   ========================================= */
+
+.cta-row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 14px;
+    margin-top: 26px;
+}
+
+.btn {
+    display: inline-block;
+    padding: 0.9rem 1.5rem;
+    border-radius: 999px;
+    background: linear-gradient(135deg, var(--vermelho) 0%, var(--rosa) 100%);
+    color: var(--branco);
+    font-weight: 700;
+    box-shadow: 0 10px 25px rgba(168, 61, 71, 0.25);
+    transition: var(--transicao);
+}
+
+.btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 16px 30px rgba(168, 61, 71, 0.3);
+}
+
+.btn-secondary {
+    background: linear-gradient(135deg, var(--verde) 0%, #2c724d 100%);
+    box-shadow: 0 10px 25px rgba(31, 93, 58, 0.25);
+}
+
+.hero-visual {
+    position: relative;
+    padding: 24px;
+    border-radius: 32px;
+    background: linear-gradient(180deg, rgba(255, 255, 255, 0.65), rgba(240, 227, 209, 0.8));
+    box-shadow: var(--sombra-forte);
+}
+
+.hero-visual img {
+    width: 100%;
+    height: auto;
+    border-radius: 26px;
+}
+
+/* =========================================
+   7. SEÇÕES E CARDS DE DESTAQUE
+   ========================================= */
+
+.section-box,
+.page-intro,
+.gallery-grid {
+    margin-top: 42px;
+}
+
+.section-title {
+    text-align: center;
+    margin-bottom: 24px;
+}
+
+.section-title h2 {
+    margin-bottom: 0;
+}
+
+.feature-grid,
+.gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 24px;
+}
+
+.feature-card,
+.gallery-item {
+    overflow: hidden;
+    background: rgba(255, 255, 255, 0.8);
+    border-radius: 24px;
+    border: 1px solid rgba(18, 59, 45, 0.08);
+    box-shadow: var(--sombra-suave);
+    transition: transform var(--transicao), box-shadow var(--transicao);
+}
+
+.feature-card:hover,
+.gallery-item:hover {
+    transform: translateY(-8px);
+    box-shadow: var(--sombra-forte);
+}
+
+.feature-card img,
+.gallery-item img {
+    width: 100%;
+    height: 240px;
+    object-fit: cover;
+    background: #f3e8dc;
+}
+
+body.pagina-vitrine main img[src*="produtos/"] {
+    border: 4px solid var(--branco);
+    border-radius: 18px;
+    box-shadow: 0 0 0 2px var(--dourado), 0 10px 24px rgba(22, 32, 29, 0.16);
+    transition: transform var(--transicao), box-shadow var(--transicao);
+}
+
+body.pagina-vitrine main img[src*="produtos/"]:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 0 0 2px var(--dourado), 0 16px 30px rgba(22, 32, 29, 0.2);
+}
+
+/* =========================================
+   8. FILTROS E CATÁLOGO DE PRODUTOS
+   ========================================= */
+
+.filtros-produtos {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) minmax(220px, 0.4fr);
+    gap: 20px;
+    margin: 24px 0;
+}
+
+.grade-produtos {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 24px;
+    padding: 24px 0;
+}
+
+.card-produto {
+    min-width: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    padding: 14px;
+    border: 1px solid rgba(18, 59, 45, 0.08);
+    border-radius: 24px;
+    background: rgba(255, 255, 255, 0.8);
+    box-shadow: var(--sombra-suave);
+    transition: transform var(--transicao), box-shadow var(--transicao);
+}
+
+.card-produto:hover {
+    transform: translateY(-5px);
+    box-shadow: var(--sombra-forte);
+}
+
+.card-produto img {
+    width: calc(100% - 12px);
+    aspect-ratio: 4 / 3;
+    margin: 6px auto 0;
+    object-fit: cover;
+    background: #f3e8dc;
+}
+
+.card-produto__conteudo {
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+}
+
+.card-produto h3,
+.card-produto p {
+    margin: 0;
+}
+
+.preco-produto {
+    color: var(--verde);
+    font-weight: 700;
+}
+
+.selo-produto {
+    padding: 6px 12px;
+    border-radius: 999px;
+    background: var(--rosa-claro);
+    color: var(--vermelho);
+    font-size: 0.8rem;
+    font-weight: 600;
+}
+
+.sem-produtos {
+    grid-column: 1 / -1;
+    color: var(--texto-suave);
+    text-align: center;
+}
+
+/* =========================================
+   9. RODAPÉ
+   ========================================= */
+
+footer {
+    background: linear-gradient(135deg, var(--verde-escuro) 0%, #193f32 100%);
+    color: var(--branco);
+    padding: 40px 6% 26px;
+    text-align: center;
+    margin-top: 60px;
+}
+
+footer p {
+    color: rgba(255, 255, 255, 0.88);
+    margin: 0.5rem 0;
+}
+
+a:focus-visible,
+button:focus-visible,
+input:focus-visible,
+textarea:focus-visible,
+select:focus-visible {
+    outline: 3px solid var(--dourado);
+    outline-offset: 3px;
+}
+
+/* =========================================
+   10. PÁGINAS SOBRE E CONTATO
+   ========================================= */
+
+body:not(.pagina-vitrine) main {
+    width: min(980px, 90%);
+    margin: 42px auto 70px;
+    display: grid;
+    gap: 26px;
+}
+
+body:not(.pagina-vitrine) main > section {
+    background: rgba(255, 255, 255, 0.8);
+    border: 1px solid rgba(18, 59, 45, 0.08);
+    border-radius: 24px;
+    padding: 2rem;
+    box-shadow: var(--sombra-suave);
+}
+
+body:not(.pagina-vitrine) main > section h2 {
+    margin-bottom: 14px;
+}
+
+body:not(.pagina-vitrine) main > section p {
+    color: var(--texto-suave);
+    margin-bottom: 12px;
+}
+
+/* =========================================
+   11. FORMULÁRIO DE CONTATO
+   ========================================= */
+
+label {
+    display: block;
+    margin-bottom: 0.4rem;
+    font-weight: 600;
+    color: var(--verde-escuro);
+}
+
+input,
+textarea,
+select {
+    width: 100%;
+    padding: 0.9rem 1rem;
+    margin-bottom: 1rem;
+    border: 1px solid rgba(168, 61, 71, 0.25);
+    border-radius: 14px;
+    background: #fff;
+    font: inherit;
+}
+
+input:focus-visible,
+textarea:focus-visible,
+select:focus-visible {
+    outline: 2px solid var(--verde);
+}
+
+textarea {
+    resize: vertical;
+}
+
+button {
+    padding: 0.9rem 1.5rem;
+    border: 0;
+    border-radius: 999px;
+    background: linear-gradient(135deg, var(--vermelho), var(--rosa));
+    color: var(--branco);
+    font: 700 1rem var(--fonte-texto);
+    cursor: pointer;
+    transition: var(--transicao);
+}
+
+button:hover {
+    background: var(--verde);
+}
+
+/* =========================================
+   12. GALERIA / SLIDESHOW DE NATAL
+   ========================================= */
+
+.slideshow {
+    position: relative;
+    max-width: 900px;
+    margin: 40px auto;
+    padding: 0 50px;
+}
+
+.slide {
+    display: none;
+    overflow: hidden;
+    border-radius: 16px;
+}
+
+.slide.ativo {
+    display: block;
+}
+
+.slide img {
+    width: 100%;
+    height: 400px;
+    object-fit: cover;
+}
+
+.slide .feature-body {
+    padding: 20px;
+    background: #eeede6;
+}
+
+.slide-anterior,
+.slide-proximo {
+    position: absolute;
+    top: 42%;
+    transform: translateY(-50%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 46px;
+    height: 46px;
+    border: 1px solid rgba(255, 255, 255, 0.5);
+    border-radius: 50%;
+    background: rgba(23, 59, 67, 0.9);
+    color: #eeede6;
+    font-size: 20px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.15);
+}
+
+.slide-anterior {
+    left: 5px;
+}
+
+.slide-proximo {
+    right: 5px;
+}
+
+.slide-anterior:hover,
+.slide-proximo:hover {
+    background: #176B78;
+    transform: translateY(-50%) scale(1.1);
+}
+
+.slide-indicadores {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 18px;
+}
+
+.indicador {
+    width: 8px;
+    height: 8px;
+    border: none;
+    border-radius: 50%;
+    background: #bad9e8;
+    cursor: pointer;
+}
+
+.indicador.ativo {
+    background: #176B78;
+}
+
+/* =========================================
+   13. EFEITO PARALLAX DA HOME
+   ========================================= */
+
+.hero-copy,
+.hero-visual {
+    will-change: transform;
+    transition: transform 0.1s ease-out;
+}
+
+/* =========================================
+   14. BOTÃO DE MÚSICA
+   ========================================= */
+
+.musica-natal {
+    text-align: center;
+    padding: 20px 15px;
+    background: transparent;
+    color: inherit;
+}
+
+.musica-natal p {
+    font-family: 'Playfair Display', serif;
+    font-size: 18px;
+    margin-bottom: 12px;
+}
+
+#botao-musica {
+    padding: 12px 24px;
+    border: 1px solid #176B78;
+    border-radius: 30px;
+    background: #173B43;
+    color: #eeede6;
+    font-family: 'Poppins', sans-serif;
+    font-size: 14px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+#botao-musica:hover {
+    background: #176B78;
+    transform: translateY(-2px);
+}
+
+/* =========================================
+   15. CONTADOR REGRESSIVO PARA O NATAL
+   ========================================= */
+
+.contador-natal {
+    position: relative;
+    text-align: center;
+    padding: 75px 20px;
+    background: linear-gradient(135deg, #fff8ed, #f4e4d8);
+    color: #8f2635;
+    overflow: hidden;
+}
+
+.contador-natal .eyebrow {
+    color: #b58a50;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    font-size: 11px;
+    font-weight: 700;
+}
+
+.contador-natal h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(26px, 4vw, 38px);
+    margin: 14px 0 35px;
+    color: #8f2635;
+}
+
+.contador {
+    display: flex;
+    justify-content: center;
+    gap: 18px;
+    flex-wrap: wrap;
+}
+
+.contador div {
+    width: 115px;
+    padding: 25px 12px 20px;
+    background: #fffdf8;
+    border: 1px solid #e6c9a8;
+    border-radius: 18px;
+    box-shadow: 0 8px 22px rgba(143, 38, 53, 0.09);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.contador div:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 12px 25px rgba(143, 38, 53, 0.15);
+}
+
+.contador span {
+    display: block;
+    font-family: 'Playfair Display', serif;
+    font-size: 38px;
+    font-weight: 700;
+    color: #a52f40;
+    line-height: 1.2;
+}
+
+.contador p {
+    margin: 9px 0 0;
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: #a88968;
+}
+
+@media (max-width: 480px) {
+    .contador-natal {
+        padding: 55px 15px;
+    }
+
+    .contador {
+        gap: 12px;
+    }
+
+    .contador div {
+        width: calc(50% - 12px);
+        padding: 20px 10px;
+    }
+
+    .contador span {
+        font-size: 32px;
+    }
+}
+
+/* =========================================
+   16. EFEITO DE NEVE CAINDO
+   ========================================= */
+
+.floco-neve {
+    position: fixed;
+    top: -20px;
+    color: white;
+    font-size: 12px;
+    opacity: 0.8;
+    pointer-events: none;
+    z-index: 9999;
+    user-select: none;
+    animation: cair-neve linear infinite;
+    text-shadow: 0 0 5px rgba(150, 150, 150, 0.4);
+}
+
+@keyframes cair-neve {
+    0% {
+        transform: translateY(-20px) translateX(0);
+    }
+
+    100% {
+        transform: translateY(110vh) translateX(35px);
+    }
+}
+
+/* =========================================
+   17. BOTÕES DOS CARDS DE PRODUTOS
+   ========================================= */
+
+.botoes-produto {
+    display: flex;
+    gap: 8px;
+    width: 100%;
+    margin-top: auto;
+}
+
+.botoes-produto button {
+    flex: 1;
+    padding: 9px 7px;
+    font-size: 0.75rem;
+    border-radius: 20px;
+    white-space: nowrap;
+}
+
+.botoes-produto button:first-child {
+    background: var(--creme);
+    color: var(--vermelho);
+    border: 1px solid var(--vermelho);
+}
+
+.botoes-produto button:last-child {
+    background: var(--vermelho);
+    color: white;
+}
+
+.botoes-produto button:hover {
+    transform: translateY(-2px);
+    opacity: 0.85;
+}
+
+/* =========================================
+   18. MODAL DE DETALHES DOS PRODUTOS
+   ========================================= */
+
+.modal-produto[hidden] {
+    display: none;
+}
+
+.modal-produto {
+    position: fixed;
+    inset: 0;
+    z-index: 9999;
+    background: rgba(30, 20, 15, 0.7);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    animation: aparecerModal 0.25s ease;
+}
+
+.modal-conteudo {
+    position: relative;
+    display: flex;
+    align-items: center;
+    gap: 28px;
+    width: 100%;
+    max-width: 700px;
+    padding: 30px;
+    background: var(--creme);
+    border-radius: 22px;
+    box-shadow: 0 15px 45px rgba(0, 0, 0, 0.25);
+    animation: subirModal 0.3s ease;
+}
+
+.modal-conteudo img {
+    width: 45%;
+    max-height: 320px;
+    object-fit: cover;
+    border-radius: 16px;
+}
+
+.modal-informacoes {
+    flex: 1;
+}
+
+.modal-informacoes h2 {
+    color: var(--vermelho);
+    font-family: var(--fonte-titulo);
+    margin-bottom: 15px;
+}
+
+.modal-informacoes p {
+    line-height: 1.7;
+}
+
+.modal-informacoes .preco-produto {
+    color: var(--vermelho);
+    font-size: 1.4rem;
+    font-weight: 700;
+    margin-top: 18px;
+}
+
+.fechar-modal {
+    position: absolute;
+    top: 12px;
+    right: 16px;
+    width: 35px;
+    height: 35px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0;
+    border: none;
+    border-radius: 50%;
+    background: var(--vermelho);
+    color: white;
+    font-family: Arial, sans-serif;
+    font-size: 25px;
+    line-height: 1;
+    text-align: center;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+.fechar-modal:hover {
+    transform: rotate(90deg);
+    background: var(--verde-escuro);
+}
+
+@keyframes aparecerModal {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes subirModal {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* MODAL NO CELULAR */
+@media (max-width: 600px) {
+    .modal-conteudo {
+        flex-direction: column;
+        gap: 15px;
+        padding: 25px 20px;
+        max-height: 90vh;
+        overflow-y: auto;
+    }
+
+    .modal-conteudo img {
+        width: 100%;
+        max-height: 220px;
+    }
+
+    .modal-informacoes h2 {
+        font-size: 1.4rem;
+    }
+}
+
+/* =========================================
+   19. FOTOS DA EQUIPE
+   ========================================= */
+
+.card-equipe img {
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 4px solid #d9a5a0;
+    padding: 4px;
+    background: #fffaf3;
+    box-shadow: 0 4px 12px rgba(143, 38, 53, 0.15);
+    display: block;
+    margin: 0 0 15px 0;
+}

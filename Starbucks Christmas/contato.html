@@ -1,0 +1,103 @@
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contato | Starbucks Christmas</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="responsivo.css">
+</head>
+
+<body class="pagina-contato">
+
+    <header>
+    <h1 class="logo">Starbucks Christmas</h1>
+    <p>The Magic of Christmas Starts Here</p>
+
+    <button class="botao-menu" id="botao-menu" aria-label="Abrir menu" aria-expanded="false">☰</button>
+
+    <nav class="menu" id="menu">
+        <a href="index.html">Início</a>
+        <a href="produtos.html">Cardápio</a>
+        <a href="sobre.html">Sobre nós</a>
+        <a href="galeria.html">Natal</a>
+        <a class="ativo" href="contato.html">Contato</a>
+    </nav>
+</header>
+
+    <main>
+
+        <section>
+            <h2>Entre em Contato</h2>
+
+            <p>
+                Ficou com alguma dúvida ou deseja saber mais
+                sobre nossos produtos? Envie uma mensagem!
+            </p>
+        </section>
+
+        <section>
+            <h2>Envie sua Mensagem</h2>
+
+            <form action="#" method="post">
+
+                <label for="nome">Nome:</label>
+                <input type="text" id="nome" name="nome"
+                    placeholder="Digite seu nome" required>
+
+                <br><br>
+
+                <label for="email">E-mail:</label>
+                <input type="email" id="email" name="email"
+                    placeholder="Digite seu e-mail" required>
+
+                <br><br>
+
+                <label for="assunto">Assunto:</label>
+                <input type="text" id="assunto" name="assunto"
+                    placeholder="Digite o assunto" required>
+
+                <br><br>
+
+                <label for="mensagem">Mensagem:</label>
+                <textarea id="mensagem" name="mensagem"
+                    rows="5" cols="30"
+                    placeholder="Escreva sua mensagem"
+                    required></textarea>
+
+                <br><br>
+
+                <button type="submit">Enviar Mensagem</button>
+
+            </form>
+             <p id="mensagem-form" aria-live="polite"></p>
+        </section>
+             
+        
+        <section>
+            <h2>Informações da Loja</h2>
+
+            <p>Nome: Starbucks Christmas</p>
+            <p>Atendimento: Segunda à Sexta</p>
+            <p>Horário: 9h às 18h</p>
+            <p>E-mail: contato@starbuckschristmas.com</p>
+        </section>
+
+    </main>
+
+    <footer>
+        <p>Starbucks Christmas - Projeto escolar</p>
+        <p>The Magic of Christmas Starts Here</p>
+    </footer>
+
+    <script src="js/script.js" defer></script>
+
+
+</body>
+
+</html>

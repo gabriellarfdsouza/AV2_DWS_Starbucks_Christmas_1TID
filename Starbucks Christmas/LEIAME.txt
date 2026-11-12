@@ -1,0 +1,34 @@
+LEIA-ME
+
+LOJA: Starbucks Christmas
+SEGMENTO: Cafeteria / Alimentação
+TURMA: 1TID
+
+INTEGRANTES:
+- Gabriella Roberta Freitas de Souza - CSS, estilização das páginas, integração final dos arquivos e criação do LEIA-ME.txt
+- Valentina Scionato - JavaScript e edição do vídeo final
+- Manuela Buer - Desenvolvimento das cinco páginas HTML
+
+LINKS:
+Site (GitHub Pages): PREENCHER
+Repositório (GitHub): PREENCHER
+Vídeo (YouTube): PREENCHER
+
+RECURSOS DE JAVASCRIPT IMPLEMENTADOS:
+1. Slideshow de imagens - index.html
+2. Efeito parallax - index.html
+3. Reprodução de música de Natal - páginas do site
+4. Geração dinâmica de cards com 50 produtos - produtos.html
+5. Filtro por categoria e busca por nome - produtos.html
+6. Ordenação dos produtos - produtos.html
+7. Carrinho de compras - produtos.html
+8. Modal com detalhes dos produtos - produtos.html
+9. Contador regressivo para o Natal - sobre.html
+10. Validação do formulário de contato - contato.html
+11. Menu hambúrguer responsivo - todas as páginas
+12. Efeito de neve caindo - páginas do site
+
+CRÉDITOS (IMAGENS, SONS E ÍCONES):
+- Imagens: pinterest, e
+- Música: PREENCHER COM A FONTE UTILIZADA
+- Ícones: PREENCHER, SE HOUVER
